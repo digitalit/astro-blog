@@ -4,17 +4,17 @@ function formatDate(date: Date): string {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
-  };
+  }
 
-  return new Date(date).toLocaleDateString(undefined, options);
+  return new Date(date).toLocaleDateString('sv', options)
 }
 
 // Capitalize the first letter
 function capitalize(str: string): string {
   if (typeof str !== 'string' || str.length === 0) {
-    return str;
+    return str
   }
-  return str.charAt(0).toUpperCase() + str.slice(1);
+  return str.charAt(0).toUpperCase() + str.slice(1)
 }
 
-export { formatDate, capitalize };
+export { formatDate, capitalize }
